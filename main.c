@@ -1,10 +1,10 @@
-// Integrantes da dupla: Daniel e Filipe Mattos.
+// Integrantes da dupla: Daniel Tadeu Donateli e Filipe Magioni Mattos.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
 #define TAM 5000
-//variavel global para contar quantos espaços a str principal tera para definir assim o numero exato de colunas
+//variavel global para contar quantos espaÃ§os a str principal tera para definir assim o numero exato de colunas
 int x = 1;
 //Funcao para alocar matiz
 char ** alocarmatrizchar(int quant_linhas, int quant_colunas){
@@ -16,7 +16,7 @@ char ** alocarmatrizchar(int quant_linhas, int quant_colunas){
 		}
 	return (matriz);
 }
-//função que vai ler uma string
+//funÃ§Ã£o que vai ler uma string
 char* lerdados (char *s){
 	printf("============== Digite a string ============== \n");
 	gets(s);
@@ -28,7 +28,7 @@ char* lerdados (char *s){
 	}
 	return (s);
 	}
-// funçao que ira quebrar uma string em varias sub strings alocando elas em cada linha de uma matriz
+// funÃ§ao que ira quebrar uma string em varias sub strings alocando elas em cada linha de uma matriz
 char ** quebrastr (char *s){
 	int i,j = 0,k = 0;
 	char **temp = alocarmatrizchar(x,100);
@@ -142,7 +142,7 @@ char * inversao2a2(char *s){
 	}	
 	return(s);
 }
-// Funçao que ira Juntar todas as regras de Criptografia
+// FunÃ§ao que ira Juntar todas as regras de Criptografia
 char * juncao(char *s, int *chave){
 	s = lingAU(s, chave);
 	s = enxertoEI(s);
@@ -150,7 +150,7 @@ char * juncao(char *s, int *chave){
 	s = inversao2a2(s);
 	return(s);
 }
-// Funçao que ira descriptografar a lingua AU
+// FunÃ§ao que ira descriptografar a lingua AU
 char * descriptLingAU(char *s, int *chave){
 	int i, j = 0, k = 0;
 	char * temp = (char*)calloc(TAM,sizeof(char));
@@ -299,13 +299,13 @@ int main (){
 	lerdados(*str);
 	mtrx = quebrastr(*str);
 	mtrx = criptografarDados(mtrx, x, chave);
-	printf("A string criptografada é: ");
+	printf("A string criptografada Ã©: ");
 	for(j=0; j<x; j++){
 		printf("%s ", mtrx[j]);
 	}
 	printf("\n");
 	mtrx = descriptografarDados(mtrx, x, chave);
-	printf("A string descriptografada é: ");
+	printf("A string descriptografada Ã©: ");
 	for(j=0; j<x; j++){
 		printf("%s ", mtrx[j]);
 	}
